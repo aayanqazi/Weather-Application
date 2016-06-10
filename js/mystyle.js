@@ -7,7 +7,6 @@ $.getJSON("http://ip-api.com/json/?callback=?",function(asap)
     var link = "http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&appid=2835cc3812df97ba8b3dc3f1ed15ea68&units=metric"
 $('.longitude').html(link);
 
-
 $.getJSON(link,function(data){
 
 var html="";
@@ -30,5 +29,16 @@ var i = data.weather[0].icon;
   $('.des').html(description);
 })
 })
+}),
+$('#getmessage').on('click',function(){
+        $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+            var table_body = "";
+            $.each(data, function(k, v) {
+                table_body += "<tr><td>" + k + "</td><td><b>" + v + "</b></td></tr>";
+            });
+            $("#gettable").html(table_body);
+        });
+
+
 });
 });
