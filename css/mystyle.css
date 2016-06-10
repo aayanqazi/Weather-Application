@@ -1,0 +1,28 @@
+body
+{
+  background-color:black;
+}
+h1,h2, .message 
+{
+  color:white;
+}
+table{
+  color:white;
+  border:1px solid white;
+}
+.location , .temperature , .image ,.des
+{
+  color:black;
+  text-align:center;
+  font-family:arial bold;
+  
+}
+.humidity, .windspeed , .extra, .inline , .pressure
+{
+color:red;
+  display:inline;
+  font-family:arial bold;
+}
+
+
+
